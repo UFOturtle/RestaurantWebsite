@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    color: rgb(34, 98, 155);
+    text-decoration: unset;
+}
+
+ul {
+    margin-left: 1.5rem;
+    list-style:none;
+}
+
+button,
+input[type="submit"] {
+    border: none;
+    background: none;
+    color: unset;
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 1em 0;
+}
+/* General */
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+.page {
+    padding: 1rem;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+/* Header */
+#header {
+    display: flex;
+    background-color: rgb(28, 28, 53);
+    justify-content: space-between;
+    align-items: center;
+}
+#header .title {
+    margin: 0;
+    padding: 0 1rem;
+    
+}
+#header .auth-options {
+    display: flex;
+    height: 100%;
+}
+#header .auth-options button {
+    padding: 0 0.5rem;
+    background-color: rgb(60, 60, 109);
+    color: #ffffff;
+    font-size:  .9rem;
+}
+#header .auth-options button:hover {
+    background-color: rgb(28, 28, 53);
+}
+
+/* form */
+
+.form label,
+.form input {
+    display: block;
+}
+.form input {
+    margin-bottom: 1rem;
+}
+.form label {
+    margin-bottom: 0.5rem;
+}
+.form input[type="text"],
+.form input[type="username"],
+.form input[type="password"] {
+    width: 100%;
+    padding: .4rem;
+    font-size: 1.1rem;
+    border: 1px solid gray;
+    background-color: #dfdfdf;
+    border-radius: 8px;;
+}
+
+.form input:focus {
+    outline: none;
+    border: 1px solid;
+    box-shadow: inset 0px 0px 10px rgba(38, 142, 228, 0.5);
+}
+.form input[type="submit"] {
+    border: 1px solid #070799;
+    background-color:  #5d5deb;
+    color: white;
+    padding: 0.3rem 0.5rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+}
+.form input[type="submit"]:hover {
+    background-color:  #04047c;
+    box-shadow: inset 0px 0px 10px rgba(38, 142, 228, 0.5);
+}
+
+/* media queries */
+
+@media screen and (max-width: 550px) {
+    #header .title {
+        font-size: 1.2rem;
+    }
+}
