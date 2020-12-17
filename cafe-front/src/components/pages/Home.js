@@ -6,7 +6,7 @@ import Upload from "../items/Upload";
 export default function Home() {
   const { userData } = useContext(UserContext);
   console.log("user data: " + userData.user);
-
+  
   return (
     <div className="page">
       {userData.user ? (

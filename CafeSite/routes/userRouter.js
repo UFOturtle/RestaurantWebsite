@@ -54,7 +54,8 @@ router.post("/login", async (req, res) => {
         if(password.length < 5 && password.length > 20)
             return res.status(400).json({msg: "The password needs to be between 5 - 20 characters long."});
 
-        console.log(username);
+        console.log("username to check: " + username);
+        
         const userValid = await u.checkUser(username);
 
         console.log("user valid: " + userValid);

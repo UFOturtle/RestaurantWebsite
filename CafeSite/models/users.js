@@ -131,16 +131,14 @@ class UsersModel {
             docClient.query(params, function(err, data) {
                 if (err) {
                     reject(err);
-                    console.error("Unable to query. Error:", JSON.stringify(err, null, 2));
+                    console.error("Unable to check. Error:", JSON.stringify(err, null, 2));
                 } else {
                     console.log("Data items: " + data.Count)
                     resolve(data.Count != 0)
                 }
             });
 
-        });
-            
-        
+        });   
     }
 
     addItem(file, fileName, itemName) {

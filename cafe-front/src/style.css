@@ -107,6 +107,17 @@ body {
     box-shadow: inset 0px 0px 10px rgba(38, 142, 228, 0.5);
 }
 
+/* Menu */
+.menuItem {
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    width: 30rem;
+    margin-top: 1rem;
+}
+.menuItemPic {
+    width: 15rem;
+}
 /* media queries */
 
 @media screen and (max-width: 550px) {

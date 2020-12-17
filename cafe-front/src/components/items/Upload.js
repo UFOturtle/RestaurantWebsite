@@ -27,7 +27,7 @@ export default function Upload() {
       }
     );
     console.log(addRes);
-    history.push("/");
+    history.push("/menu");
   };
 
   return (
@@ -48,7 +48,7 @@ export default function Upload() {
           name="filename"
           onChange={(e) => setFile(e.target.files[0])}
         />
-        <input type="submit" value="Login" />
+        <input type="submit" value="Add Item" />
       </form>
     </div>
   );

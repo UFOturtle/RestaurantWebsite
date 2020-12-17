@@ -16,3 +16,4 @@ app.listen(PORT, () => console.log(`port: ${PORT}`));
 
 //set routes
 app.use("/users", require("./routes/userRouter"));
+app.use("/menu", require("./routes/menuRouter"));

@@ -7,6 +7,7 @@ import Register from "./components/auth/Register";
 import Header from "./components/layout/Header";
 import "./style.css";
 import UserContext from "./context/UserContext";
+import Menu from "./components/items/Menu";
 
 export default function App() {
     const [userData, setUserData] = useState({
@@ -52,6 +53,7 @@ export default function App() {
                     <Route exact path="/" component={Home} />
                     <Route path="/login" component={Login} />
                     <Route path="/register" component={Register} />
+                    <Route path="/menu" component={Menu} />
                 </Switch>
             </div>
         </UserContext.Provider>

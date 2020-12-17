@@ -10,6 +10,7 @@ export default function AuthOptions() {
 
     const register = () => history.push("/register");
     const login = () => history.push("/login");
+    const menu = () => history.push("menu");
     const logout = () => {
         setUserData({
             token: undefined,
@@ -30,6 +31,7 @@ export default function AuthOptions() {
                     </>
                 )
             }
+            <button onClick={menu}>Menu</button>
         </nav>
     )
 }
