@@ -6,6 +6,8 @@ import UserContext from "../../context/UserContext";
 export default function Upload() {
   const [itemName, setItemName] = useState();
   const [file, setFile] = useState();
+  const [itemPrice, setPrice] = useState();
+  const [itemDescription, setDescription] = useState();
   const { userData } = useContext(UserContext);
 
   const history = useHistory();
@@ -15,6 +17,8 @@ export default function Upload() {
     const addItem = new FormData();
     addItem.append("itemName", itemName);
     addItem.append("file", file);
+    addItem.append("itemPrice" , itemPrice);
+    addItem.append("itemDescription", itemDescription);
 
     const addRes = await Axios.post(
       "http://localhost:8001/users/addItem",
@@ -41,7 +45,20 @@ export default function Upload() {
           onChange={(e) => setItemName(e.target.value)}
         />
 
-        <label htmlFor="item-Image">Image</label>
+        <label htmlFor="item-price">Price</label>
+        <input
+          id="item-price"
+          type="number"
+          step="0.01"
+          onChange={(e) => setPrice(e.target.value)}
+        />
+
+        <label htmlFor="item-description">Description</label>
+        <textarea id="item-description" name="description" 
+          onChange={(e) => setDescription(e.target.value)}
+        />
+
+        <label htmlFor="filename">Image</label>
         <input
           type="file"
           id="myFile"

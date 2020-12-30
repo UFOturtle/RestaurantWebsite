@@ -140,18 +140,22 @@ class UsersModel {
 
         });   
     }
-
-    addItem(file, fileName, itemName) {
+    //This will when starting application due to a region error for some reason you have to log out and
+    //re log back in for this work if there is an already valid auth token
+    addItem(file, fileName, itemName, price, description) {
         r.addItem(file, fileName);
         var params = {
             TableName:"RestaurantItems",
             Item:{
                 "itemName": `${itemName}`,
                 "fileName": `${fileName}`,
+                "price": price,
+                "description": description
             }
         };
         
         console.log("Adding a new item...");
+        console.log(AWS.config.region);
         docClient.put(params, function(err, data) {
             if (err) {
                 console.error("Unable to add item. Error JSON:", JSON.stringify(err, null, 2));

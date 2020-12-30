@@ -114,8 +114,8 @@ router.post("/tokenIsValid", async(req, res) => {
 router.post("/addItem", auth, upload.any(), async (req, res) => {
     try{
         const { originalname, buffer } = req.files[0];
-        console.log(originalname);
-        u.addItem(buffer, originalname, req.body.itemName);
+        //console.log(originalname);
+        u.addItem(buffer, originalname, req.body.itemName, req.body.itemPrice, req.body.itemDescription);
         return res.json({msg: "Item added"})
     }catch(err){
         res.status(500).json({error: err.message});
